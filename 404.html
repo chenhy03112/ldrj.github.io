@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>页面跳转中...</title>
+  <script>
+    // SPA 回退：保存原始路径，重定向到首页由 HashRouter 处理
+    sessionStorage.setItem('redirect', window.location.href);
+    // 自动适配本地预览与 GitHub Pages（项目页 / 用户页）
+    var p = window.location.pathname;
+    var base = '/';
+    if (p.indexOf('/ldrj.github.io/') === 0) {
+      base = '/ldrj.github.io/';
+    }
+    window.location.replace(base);
+  </script>
+</head>
+<body>
+  <p>页面跳转中，请稍候...</p>
+</body>
+</html>
